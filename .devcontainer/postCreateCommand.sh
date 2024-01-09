@@ -2,4 +2,4 @@
 
 echo "Running postCreateCommand.sh"
 
-# pipenv install --dev
+pipenv install --dev
