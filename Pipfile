@@ -8,6 +8,7 @@ django = "*"
 whitenoise = "*"
 django-environ = "*"
 psycopg = "*"
+gunicorn = "*"
 
 [dev-packages]
 pre-commit = "*"
