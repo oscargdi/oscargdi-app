@@ -7,7 +7,7 @@ services:
     volumes:
       - ../..:/workspaces:cached
     environment:
-      DATABASE_URL: postgres://user:password@db:5432/finance
+      DATABASE_URL: postgres://user:password@db:5432/oscargdi
     command: sleep infinity
   db:
     image: postgres:latest
@@ -16,7 +16,7 @@ services:
       - postgres-data:/var/lib/postgresql/data
     environment:
       POSTGRES_USER: user
-      POSTGRES_DB: finance
+      POSTGRES_DB: oscargdi
       POSTGRES_PASSWORD: password
 volumes:
   postgres-data:

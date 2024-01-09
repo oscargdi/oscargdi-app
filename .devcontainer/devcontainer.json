@@ -15,7 +15,7 @@
         "files.trimTrailingWhitespace": true,
         "sqltools.connections": [
           {
-            "connectString": "postgres://user:password@db:5432/finance",
+            "connectString": "postgres://user:password@db:5432/oscargdi",
             "driver": "PostgreSQL",
             "name": "Local"
           }
@@ -24,7 +24,7 @@
     }
   },
   "dockerComposeFile": "docker-compose.yml",
-  "name": "Finance App",
+  "name": "My App",
   "postCreateCommand": "./.devcontainer/postCreateCommand.sh",
   "service": "app",
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}"
