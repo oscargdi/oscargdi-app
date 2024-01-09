@@ -1,21 +1,16 @@
 version: '3.8'
-
 services:
   app:
     build:
       context: ..
       dockerfile: .devcontainer/Dockerfile
-
     volumes:
       - ../..:/workspaces:cached
-
     environment:
       DATABASE_URL: postgres://user:password@db:5432/finance
       DEBUG: 1
       ALLOWED_HOSTS: "*"
-
     command: sleep infinity
-
   db:
     image: postgres:latest
     restart: unless-stopped
@@ -25,6 +20,5 @@ services:
       POSTGRES_USER: user
       POSTGRES_DB: finance
       POSTGRES_PASSWORD: password
-
 volumes:
   postgres-data:

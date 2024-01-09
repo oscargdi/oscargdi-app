@@ -1,48 +1,31 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/postgres
 {
-	"name": "Finance App",
-	"dockerComposeFile": "docker-compose.yml",
-	"service": "app",
-	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"GitHub.copilot",
-				"eamodio.gitlens",
-				"usernamehw.errorlens",
-				"mtxr.sqltools",
-				"mtxr.sqltools-driver-pg",
-				"ms-azuretools.vscode-docker"
-			],
-			"settings": {
-				"files.trimFinalNewlines": true,
-				"files.trimTrailingWhitespace": true,
-				"files.insertFinalNewline": true,
-				"sqltools.connections": [
-					{
-						"name": "Local",
-						"driver": "PostgreSQL",
-						"connectString": "postgres://user:password@db:5432/finance"
-					}
-				]
-			}
-		}
-	},
-
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
-
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// This can be used to network with other containers or the host.
-	// "forwardPorts": [5000, 5432],
-
-	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "./.devcontainer/postCreateCommand.sh"
-
-	// Configure tool-specific properties.
-	// "customizations": {},
-
-	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "GitHub.copilot",
+        "eamodio.gitlens",
+        "usernamehw.errorlens",
+        "mtxr.sqltools",
+        "mtxr.sqltools-driver-pg",
+        "ms-azuretools.vscode-docker"
+      ],
+      "settings": {
+        "files.insertFinalNewline": true,
+        "files.trimFinalNewlines": true,
+        "files.trimTrailingWhitespace": true,
+        "sqltools.connections": [
+          {
+            "connectString": "postgres://user:password@db:5432/finance",
+            "driver": "PostgreSQL",
+            "name": "Local"
+          }
+        ]
+      }
+    }
+  },
+  "dockerComposeFile": "docker-compose.yml",
+  "name": "Finance App",
+  "postCreateCommand": "./.devcontainer/postCreateCommand.sh",
+  "service": "app",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}"
 }
