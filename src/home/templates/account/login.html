@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load socialaccount %}
+{% block head_title %}
+    {% trans "Sign In" %}
+{% endblock head_title %}
+{% block content %}
+<div class="row d-flex vh-75 mt-3">
+    <div class="col-md-6 mx-auto my-auto">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title">
+                    {% trans 'Login' %}
+                </h1>
+                <div class="card-text">
+                    <form action="{% provider_login_url 'google' process='login' %}" method="post">
+                        {% csrf_token %}
+                        <button class="btn btn-outline-dark" type="submit"><i class="bi bi-google me-2"></i>{% trans 'Continue with Google'%}</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
