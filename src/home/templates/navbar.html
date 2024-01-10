@@ -1,6 +1,6 @@
 {% load i18n %}
 
-<nav class="navbar bg-body-tertiary sticky-top">
+<nav class="navbar bg-body-tertiary sticky-top mb-3">
     <div class="container-fluid">
         <a class="navbar-brand" href="{% url 'home-index' %}">{% trans 'App' %}</a>
         {% if user.is_authenticated %}
@@ -11,13 +11,17 @@
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                    <img src="{{ user.socialaccount_set.first.extra_data.picture }}" alt="Logo" width="30" height="30" class="d-inline-block rounded-circle">
+                    <img src="{{ user.socialaccount_set.first.extra_data.picture }}" alt="Logo" width="30" height="30"
+                        class="d-inline-block rounded-circle">
                     <span class="ms-1 align-middle">{{ user.first_name|title }} {{ user.last_name|title }}</span>
                 </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home-profile' %}">{% trans 'Profile' %}</a>
+                    </li>
                     <li class="nav-item">
                         <form action="{% url 'account_logout' %}" method="post">
                             {% csrf_token %}

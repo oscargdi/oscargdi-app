@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans 'Profile' %}{% endblock %}
+
+{% block content %}
+<form>
+  <fieldset disabled>
+    <legend>{% trans 'Profile' %}</legend>
+    <div class="mb-3">
+      <img src="{{ user.socialaccount_set.first.extra_data.picture }}" class="rounded-circle mx-auto d-block" alt="...">
+    </div>
+    <div class="mb-3">
+      <label for="firstName" class="form-label">{% trans 'First name' %}</label>
+      <input type="text" id="firstName" class="form-control" placeholder="Disabled input" value="{{ user.first_name }}">
+    </div>
+    <div class="mb-3">
+      <label for="lastName" class="form-label">{% trans 'Last name' %}</label>
+      <input type="text" id="lastName" class="form-control" placeholder="Disabled input" value="{{ user.last_name }}">
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">{% trans 'Email address' %}</label>
+      <input type="email" id="email" class="form-control" placeholder="Disabled input" value="{{ user.email }}">
+    </div>
+    <div class="mb-3">
+      <label for="dateJoined" class="form-label">Date joined</label>
+      <input type="text" id="dateJoined" class="form-control" placeholder="Disabled input"
+        value="{{ user.date_joined }}">
+    </div>
+    <div class="mb-3">
+      <label for="lastLogin" class="form-label">Last login</label>
+      <input type="text" id="lastLogin" class="form-control" placeholder="Disabled input" value="{{ user.last_login }}">
+    </div>
+  </fieldset>
+</form>
+{% endblock %}
