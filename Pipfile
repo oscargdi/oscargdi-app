@@ -9,11 +9,11 @@ whitenoise = "*"
 django-environ = "*"
 psycopg = "*"
 gunicorn = "*"
+django-debug-toolbar = "*"
 django-allauth = "*"
 
 [dev-packages]
 pre-commit = "*"
-django-debug-toolbar = "*"
 
 [requires]
 python_version = "3.11"
