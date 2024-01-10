@@ -45,11 +45,11 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "debug_toolbar",
+    "home.apps.HomeConfig",
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
     "allauth.socialaccount.providers.google",
-    "home.apps.HomeConfig",
 ]
 
 MIDDLEWARE = [
