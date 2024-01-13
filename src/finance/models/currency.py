@@ -1,5 +1,6 @@
 from django.db import models
 from .base import BaseModel
+from django.utils.translation import gettext_lazy as _
 
 
 class Currency(BaseModel):
@@ -7,4 +8,7 @@ class Currency(BaseModel):
     symbol = models.CharField(max_length=10)
 
     def __str__(self):
-        return self.name
+        return self.code
+
+    class Meta:
+        verbose_name_plural = _("currencies")
