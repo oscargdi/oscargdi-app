@@ -11,6 +11,7 @@ psycopg = "*"
 gunicorn = "*"
 django-debug-toolbar = "*"
 django-allauth = "*"
+django-extensions = "*"
 
 [dev-packages]
 pre-commit = "*"
