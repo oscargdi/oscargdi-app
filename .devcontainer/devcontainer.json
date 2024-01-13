@@ -19,7 +19,8 @@
             "driver": "PostgreSQL",
             "name": "Local"
           }
-        ]
+        ],
+        "sqltools.useNodeRuntime": false
       }
     }
   },
