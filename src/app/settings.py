@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "debug_toolbar",
     "home.apps.HomeConfig",
+    "finance.apps.FinanceConfig",
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
