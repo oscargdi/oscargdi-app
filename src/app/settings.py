@@ -96,6 +96,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                "home.context_processors.heroku_context",
             ],
         },
     },
@@ -175,3 +176,11 @@ LOGIN_REDIRECT_URL = "/"
 
 # Debug toolbar settings
 DEBUG_TOOLBAR_CONFIG = {"SHOW_TOOLBAR_CALLBACK": lambda x: DEBUG}
+
+HEROKU_METADATA = {
+    "APP_NAME": env("HEROKU_APP_NAME"),
+    "RELEASE_VERSION": env("HEROKU_RELEASE_VERSION"),
+    "RELEASE_CREATED_AT": env("HEROKU_RELEASE_CREATED_AT"),
+    "SLUG_COMMIT": env("HEROKU_SLUG_COMMIT"),
+    "SLUG_DESCRIPTION": env("HEROKU_SLUG_DESCRIPTION"),
+}
