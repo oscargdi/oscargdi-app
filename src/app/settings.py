@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     "debug_toolbar",
     "django_extensions",
     "home.apps.HomeConfig",
-    "finance.apps.FinanceConfig",
     "allauth",
     "allauth.account",
     "allauth.socialaccount",

@@ -23,5 +23,4 @@ urlpatterns = [
     path("accounts/", include("allauth.urls")),
     path("accounts/", include("allauth.socialaccount.urls")),
     path("", include("home.urls")),
-    path("finance/", include("finance.urls")),
 ]
