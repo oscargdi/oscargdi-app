@@ -13,7 +13,7 @@
                 <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
                     <img src="{{ user.socialaccount_set.first.extra_data.picture }}" alt="Logo" width="30" height="30"
                         class="d-inline-block rounded-circle">
-                    <span class="ms-1 align-middle">{{ user.first_name|title }} {{ user.last_name|title }}</span>
+                    <span class="ms-1 align-middle">{{ user.get_full_name|title }}</span>
                 </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
