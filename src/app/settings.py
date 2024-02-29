@@ -192,12 +192,11 @@ PUSHOVER_USER_KEY = env("PUSHOVER_USER_KEY", default=None)
 
 AWS_ACCESS_KEY_ID = env("AWS_ACCESS_KEY_ID", default=None)
 AWS_SECRET_ACCESS_KEY = env("AWS_SECRET_ACCESS_KEY", default=None)
-AWS_DEFAULT_REGION = env("AWS_DEFAULT_REGION", default=None)
+AWS_DEFAULT_REGION = env("AWS_REGION", default=None)
 
 DRAMATIQ_BROKER = {
     "BROKER": "dramatiq_sqs.SQSBroker",
     "OPTIONS": {
-        "endpoint_url": env("MESSAGE_BROKER_URL"),
         "aws_access_key_id": AWS_ACCESS_KEY_ID,
         "aws_secret_access_key": AWS_SECRET_ACCESS_KEY,
         "region_name": AWS_DEFAULT_REGION,
