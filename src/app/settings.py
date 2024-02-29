@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "debug_toolbar",
     "django_extensions",
+    "django_dramatiq",
     "home.apps.HomeConfig",
     "allauth",
     "allauth.account",
@@ -188,3 +189,30 @@ HEROKU_METADATA = {
 
 PUSHOVER_API_TOKEN = env("PUSHOVER_API_TOKEN", default=None)
 PUSHOVER_USER_KEY = env("PUSHOVER_USER_KEY", default=None)
+
+AWS_ACCESS_KEY_ID = env("AWS_ACCESS_KEY_ID", default=None)
+AWS_SECRET_ACCESS_KEY = env("AWS_SECRET_ACCESS_KEY", default=None)
+AWS_DEFAULT_REGION = env("AWS_DEFAULT_REGION", default=None)
+
+DRAMATIQ_BROKER = {
+    "BROKER": "dramatiq_sqs.SQSBroker",
+    "OPTIONS": {
+        "endpoint_url": env("MESSAGE_BROKER_URL"),
+        "aws_access_key_id": AWS_ACCESS_KEY_ID,
+        "aws_secret_access_key": AWS_SECRET_ACCESS_KEY,
+        "region_name": AWS_DEFAULT_REGION,
+    },
+    "MIDDLEWARE": [
+        "dramatiq.middleware.Prometheus",
+        "dramatiq.middleware.AgeLimit",
+        "dramatiq.middleware.TimeLimit",
+        "dramatiq.middleware.Callbacks",
+        "dramatiq.middleware.Retries",
+        "django_dramatiq.middleware.DbConnectionsMiddleware",
+        "django_dramatiq.middleware.AdminMiddleware",
+    ],
+}
+
+# Defines which database should be used to persist Task objects when the
+# AdminMiddleware is enabled.  The default value is "default".
+DRAMATIQ_TASKS_DATABASE = "default"

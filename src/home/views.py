@@ -3,7 +3,7 @@ from django.http import HttpRequest, HttpResponseRedirect
 from django.shortcuts import render
 
 from .forms import MessageForm
-from .services import send_message
+from .tasks import async_send_message
 
 
 @login_required
@@ -17,7 +17,7 @@ def home(request: HttpRequest):
         if form.is_valid():
             title = form.cleaned_data["title"]
             message = form.cleaned_data["message"]
-            send_message(title, message)
+            async_send_message.send_with_options(args=(title, message), delay=5000)
             return HttpResponseRedirect("/")
 
 
