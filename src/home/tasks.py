@@ -11,5 +11,7 @@ def async_send_message(title: str, message: str):
 
 @cron("*/5 * * * *")
 @actor(queue_name="send_message_scheduled")
-def async_send_message_scheduled(title: str, message: str):
-    send_message(title, message)
+def async_send_message_scheduled():
+    send_message(
+        "Scheduled message", "This message was scheduled to be sent every 5 minutes."
+    )
