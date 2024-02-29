@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+
 import environ
 
 env = environ.Env(
@@ -184,3 +185,6 @@ HEROKU_METADATA = {
     "SLUG_COMMIT": env("HEROKU_SLUG_COMMIT", default=None),
     "SLUG_DESCRIPTION": env("HEROKU_SLUG_DESCRIPTION", default=None),
 }
+
+PUSHOVER_API_TOKEN = env("PUSHOVER_API_TOKEN", default=None)
+PUSHOVER_USER_KEY = env("PUSHOVER_USER_KEY", default=None)
