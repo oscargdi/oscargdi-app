@@ -25,6 +25,9 @@
     }
   },
   "dockerComposeFile": "docker-compose.yml",
+  "features": {
+    "ghcr.io/devcontainers/features/aws-cli:1": {}
+  },
   "name": "My App",
   "postCreateCommand": "./.devcontainer/postCreateCommand.sh",
   "service": "app",
