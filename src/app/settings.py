@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     "debug_toolbar",
     "django_extensions",
     "django_dramatiq",
+    "dramatiq_crontab",
     "home.apps.HomeConfig",
     "allauth",
     "allauth.account",
