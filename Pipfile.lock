@@ -1,7 +1,7 @@
 {
   "_meta": {
     "hash": {
-      "sha256": "0551e438c55ba4afe27448d5076b23736a24829812c7e3c8b9a7a610c79eb427"
+      "sha256": "c52932b4d701abdaac5053de8d2ded21a8e6ccf9446e3675f20116dc41ffd6be"
     },
     "pipfile-spec": 6,
     "requires": {
@@ -23,6 +23,14 @@
       ],
       "markers": "python_version >= '3.8'",
       "version": "==0.6.0"
+    },
+    "apscheduler": {
+      "hashes": [
+        "sha256:e6df071b27d9be898e486bc7940a7be50b4af2e9da7c08f0744a96d4bd4cef4a",
+        "sha256:fb91e8a768632a4756a585f79ec834e0e27aad5860bac7eaa523d9ccefd87661"
+      ],
+      "markers": "python_version >= '3.6'",
+      "version": "==3.10.4"
     },
     "asgiref": {
       "hashes": [
@@ -317,6 +325,15 @@
       "markers": "python_version >= '3.7'",
       "version": "==1.16.0"
     },
+    "dramatiq-crontab": {
+      "hashes": [
+        "sha256:994b606e47be23e5b5049fb05776001bb1c099600a8400f91709b638887efef2",
+        "sha256:a37810fb899f8f31e47bc5ce50fc50acbe98c2d3542984532d2f53b2c865d6ca"
+      ],
+      "index": "pypi",
+      "markers": "python_version >= '3.8'",
+      "version": "==1.0.7"
+    },
     "dramatiq-sqs": {
       "hashes": [
         "sha256:857fe4fcf2a8996fb3e5a60bf2bff4a932cfeda6f934d2d9a1cdd8eb78b0b4d2",
@@ -511,6 +528,13 @@
       ],
       "version": "==3.2.0"
     },
+    "pytz": {
+      "hashes": [
+        "sha256:2a29735ea9c18baf14b448846bde5a48030ed267578472d8955cd0e7443a9812",
+        "sha256:328171f4e3623139da4983451950b28e95ac706e13f3f2630a879749e7a8b319"
+      ],
+      "version": "==2024.1"
+    },
     "requests": {
       "hashes": [
         "sha256:58cd2187c01e70e6e26505bca751777aa9f2ee0b7f4300988b709f44e013003f",
@@ -558,6 +582,14 @@
       ],
       "markers": "python_version >= '3.8'",
       "version": "==4.10.0"
+    },
+    "tzlocal": {
+      "hashes": [
+        "sha256:49816ef2fe65ea8ac19d19aa7a1ae0551c834303d5014c6d5a62e4cbda8047b8",
+        "sha256:8d399205578f1a9342816409cc1e46a93ebd5755e39ea2d85334bea911bf0e6e"
+      ],
+      "markers": "python_version >= '3.8'",
+      "version": "==5.2"
     },
     "urllib3": {
       "hashes": [

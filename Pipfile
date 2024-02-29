@@ -16,6 +16,7 @@ pydantic = "*"
 dramatiq = "*"
 django-dramatiq = "*"
 dramatiq-sqs = "*"
+dramatiq-crontab = "*"
 
 [dev-packages]
 pre-commit = "*"
