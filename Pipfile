@@ -13,9 +13,13 @@ django-debug-toolbar = "*"
 django-allauth = "*"
 django-extensions = "*"
 pydantic = "*"
+dramatiq = "*"
+django-dramatiq = "*"
+dramatiq-sqs = "*"
 
 [dev-packages]
 pre-commit = "*"
+watchdog = "*"
 
 [requires]
 python_version = "3.11"
